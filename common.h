@@ -43,7 +43,7 @@ void logBacktrace();
 #define DieSys(format, ...) DieErr(format " : %s." , ##__VA_ARGS__, \
 		strerror (errno))
 
-# define assert(expr) ( \
+#define assert(expr) ( \
 		(expr) ? (void) 0 : (\
 			DieErr( \
 				"%s:%d: Assertion (%s) is false!", \
