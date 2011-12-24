@@ -6,13 +6,13 @@
 FILE *LogFile = NULL;
 
 void logTime(time_t t) {
-		struct tm *lt = localtime(&t);
-		fprintf(
-			LogFile,
-			"%04d-%02d-%02d %02d:%02d:%02d  ",
-			lt->tm_year + 1900, lt->tm_mon + 1, lt->tm_mday,
-			lt->tm_hour, lt->tm_min, lt->tm_sec
-		);
+	struct tm *lt = localtime(&t);
+	fprintf(
+		LogFile,
+		"%04d-%02d-%02d %02d:%02d:%02d  ",
+		lt->tm_year + 1900, lt->tm_mon + 1, lt->tm_mday,
+		lt->tm_hour, lt->tm_min, lt->tm_sec
+	);
 }
 
 void *checkedMalloc(int nmemb, int size) {
