@@ -15,7 +15,7 @@ struct Array {
 #define NewArray(Type, cap) \
 	newArray(sizeof(Type), cap, Calloc(Type, cap))
 
-// Thic method can be used to access to elemtnts of array:
+// This method can be used to access to elemtnts of array:
 // x = Array_Elem(a, int, 2); Array_Elem(a, int, 2) = x;
 #define Array_Elem(a, Type, n) (*( \
 			(Type *) a->buf + (assert(n >= 0), assert(n < a->Cap), \

@@ -58,5 +58,6 @@ void *checkedCalloc(int n, int size);
 
 #define Malloc(Type, num) checkedMalloc(num, sizeof(Type))
 #define Calloc(Type, num) checkedCalloc(num,  sizeof(Type))
+#define Free(pointer) free(pointer)
 
 #endif
